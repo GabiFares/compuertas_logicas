@@ -7,6 +7,7 @@ public class OrGateTest
 {
     [TestCase(1, 1, 1)]
     [TestCase(0, 1, 1)]
+    [TestCase(0, 0, 0)]
     public void OrCalculationTest1(int a, int b, int expectedresult)
     {
         // arrange

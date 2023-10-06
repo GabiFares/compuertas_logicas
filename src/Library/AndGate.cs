@@ -4,13 +4,17 @@ public class AndGate : LogicGate
 {
     public AndGate(string name) : base(name) { }
 
+    public override void AddInput(string name, int input)
+    {
+        InputDictionary[name] = input;
+    }
     public override int Calculate()
     {
-        int result = 1;
+        Value = 1;
         foreach (int constat in InputDictionary.Values)
         {
-            result = result * constat;
+            Value = Value * constat;
         }
-        return result;
+        return Value;
     }
 }
